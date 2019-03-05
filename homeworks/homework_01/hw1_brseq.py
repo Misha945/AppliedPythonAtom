@@ -3,11 +3,26 @@
 
 
 def is_bracket_correct(input_string):
-    '''
-    Метод проверяющий является ли поданная скобочная
-     последовательность правильной (скобки открываются и закрываются)
-     не пересекаются
-    :param input_string: строка, содержащая 6 типов скобок (,),[,],{,}
-    :return: True or False
-    '''
+    a = 0
+    b = 0
+    c = 0
+    for i in input_string:
+        if input_string[i] == '(':
+            a += 1
+        if input_string[i] == '[':
+            b += 1
+        if input_string[i] == '{':
+            c += 1
+        if input_string[i] == ')':
+            a -= 1
+        if input_string[i] == ']':
+            b -= 1
+        if input_string[i] == '}':
+            c -= 1
+        if (a < 0) or (b < 0) or (c < 0):
+            return False
+    if (a**2 + b**2 + c**2) == 0:
+        return True
+    else:
+        return False
     raise NotImplementedError
