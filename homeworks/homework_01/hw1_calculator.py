@@ -13,7 +13,7 @@ def calculator(x, y, operator):
         return x-y
     if operator == 'mult':
         return x*y
-    if operator == 'devide' and y != 0:
+    if operator == 'divide' and y != 0:
         return x/y
     return None
     raise NotImplementedError
