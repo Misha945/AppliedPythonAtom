@@ -3,16 +3,17 @@
 
 
 def calculator(x, y, operator):
-    if not (type(x) == int or type(y) == int or
-            type(x) == float or type(y) == float):
-            return None
+    if type(x) != int and type(x) != float:
+        return None
+    if type(y) != int and type(y) != float:
+        return None
     if operator == 'plus':
         return x+y
     if operator == 'minus':
         return x-y
     if operator == 'mult':
         return x*y
-    if operator == 'devide' and y != 0:
+    if operator == 'devide' and y != 0.0:
         return x/y
     return None
     raise NotImplementedError
