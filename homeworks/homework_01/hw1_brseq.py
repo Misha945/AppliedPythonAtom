@@ -13,9 +13,9 @@ def is_bracket_correct(input_string):
         else:
             if not stack:
                 return False
-            if not((input_string[i] == ')' and stack.pop() == '(')
-               or (input_string[i] == ']' and stack.pop() == '[')
-               or (input_string[i] == '}' and stack.pop() == '{')):
+            if not((input_string[i] == ')' and stack.pop() == '(') or
+                  (input_string[i] == ']' and stack.pop() == '[') or
+                  (input_string[i] == '}' and stack.pop() == '{')):
                 return False
         i += 1
     if stack:
