@@ -20,6 +20,6 @@ def find_indices(input_list, n):
         else:
             res.append(i)
             res.append(k)
-            return res
+            return tuple(res)
     return None
     raise NotImplementedError
