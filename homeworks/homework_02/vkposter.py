@@ -12,7 +12,7 @@ class VKPoster:
         self.users = {}
         self.posts = {}
         raise NotImplementedError
-        
+
     def create_user(self, user_id):
         self.users.update({user_id: []})
 
