@@ -5,7 +5,7 @@
 def listminus(ks, vs, KS, VS):
     k = 0
     if (type(vs) == list or type(vs) == set or
-        type(vs) == tuple):
+       type(vs) == tuple):
         k += 1
         if type(vs) == set:
             vs = list(vs)
@@ -14,13 +14,13 @@ def listminus(ks, vs, KS, VS):
     else:
         VS.append(ks)
         KS.append(vs)
-        
+
 
 def invert_dict(source_dict):
     if len(source_dict) == 0:
         new_dict = {}
         return new_dict
-    
+
     keys = list(source_dict.keys())
     values = list(source_dict.values())
     keys2 = []
