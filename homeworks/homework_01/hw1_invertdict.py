@@ -17,13 +17,17 @@ def listminus(ks, vs, KS, VS):
         
 
 def invert_dict(source_dict):
+    if len(source_dict) == 0:
+        new_dict = {}
+        return new_dict
+    
     keys = list(source_dict.keys())
     values = list(source_dict.values())
     keys2 = []
     values2 = []
 
     for i in range(len(values)):
-        listminus(keys[i],values[i],keys2,values2)
+        listminus(keys[i], values[i], keys2, values2)
 
     i = 0
     l = [l * 0 for l in range(len(keys2))]
