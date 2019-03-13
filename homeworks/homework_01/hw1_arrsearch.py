@@ -7,19 +7,11 @@ def find_indices(input_list, n):
         return None
     if input_list is None:
         return None
-    res = []
-    i = 0
-    k = len(input_list) - 1
-    input_list.sort()
-    while (i != k):
-        sum = input_list[i] + input_list[k]
-        if (sum > n):
-            k -= 1
-        elif (sum < n):
-            i += 1
-        else:
-            res.append(i)
-            res.append(k)
-            return tuple(res)
+    dict1 = {}
+    for i in range(len(input_list)):
+        dict1[input_list[i]] = i
+    for i in dict1.keys():
+        if dict1.get(n-i) is not None:
+            return (dict1[i], dict1.get(n-i))
     return None
     raise NotImplementedError
