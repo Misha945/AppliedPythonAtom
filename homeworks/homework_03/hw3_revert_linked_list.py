@@ -3,10 +3,12 @@
 
 
 def revert_linked_list(head):
-    """
-    A -> B -> C should become: C -> B -> A
-    :param head: LLNode
-    :return: new_head: LLNode
-    """
-    # TODO: реализовать функцию
+    back = None
+    c = head
+    while c:
+        f = c.next_node
+        c.next_node = back
+        back = c
+        c = f
+    return back
     raise NotImplementedError
